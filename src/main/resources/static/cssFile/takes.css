@@ -1,0 +1,4 @@
+.readonly {
+    pointer-events: none; /* Prevents user interaction */
+    background-color: #f3f3f3; /* Optional: style to indicate non-editable */
+}

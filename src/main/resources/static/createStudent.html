@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/cssFile/students.css">
+</head>
+
+<body class=" p-4">
+<div class="flex  flex-row justify-center w-full">
+
+    <div class="bg-gray-800 text-white w-1/5 flex flex-col items-center">
+        <div class="py-4 text-2xl font-bold">Admin Dashboard</div>
+        <nav class="text-sm w-full">
+            <a href="/students.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Students</a>
+            <a href="/industries.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Industries</a>
+            <a href="/faculties.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Faculties</a>
+            <a href="/courses.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Courses</a>
+            <a href="/takes.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Takes</a>
+            <a href="/sections.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Sections</a>
+            <a href="/teachers.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Teachers</a>
+            <a href="/times.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Times</a>
+            <a href="/setting.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Settings</a>
+            <a href="/templates/index.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Logout</a>
+        </nav>
+    </div>
+
+    <div class="container flex flex-col justify-evenly  bg-slate-100 p-6 ">
+        <h2 class="text-2xl font-semibold mb-4">Add Student</h2>
+        <!-- Basic Details Section -->
+        <div class="p-3 rounded-md bg-white shadow-md my-2 shadow-slate-400">
+            <h3 class="text-xl font-semibold mb-2">Basic Details</h3>
+            <div class="grid grid-cols-2 gap-4 ">
+                <div class="mb-4">
+                    <label for= "Administrator_ID" class="block text-sm font-medium text-gray-600">Student ID</label>
+                    <input  type="text" id="Administrator_ID" name="teacherId" class="mt-1 p-2 w-full border-slate-400  border rounded-md outline-none">
+                </div>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-600">Full Name</label>
+                    <input  type="text" id="name" name="name" class="mt-1 p-2 w-full border border-slate-400   rounded-md outline-none">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-600">Gender</label>
+                    <label class="inline-flex px-1 items-center">
+                        <input  type="radio" class="form-radio" name="gender" value="Male">
+                        <span class="ml-2">Male</span>
+                    </label>
+                    <label class="inline-flex px-1 items-center">
+                        <input  type="radio" class="form-radio" name="gender" value="Female">
+                        <span class="ml-2">Female</span>
+                    </label>
+                    <label class="inline-flex px-1 items-center">
+                        <input  type="radio" class="form-radio" name="gender" value="Other">
+                        <span class="ml-2">Other</span>
+                    </label>
+                </div>
+                <div class="mb-4">
+                    <label for="dob" class="block text-sm font-medium text-gray-600">Date of Birth</label>
+                    <input  type="date" id="dob" name="dob" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none"
+                    >
+                </div>
+
+                <div class="mb-4">
+                    <label for="mobile" class="block text-sm font-medium text-gray-600">Credits</label>
+                    <input  type="number" id="mobile" name="mobile" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                </div>
+
+
+                <div class="mb-4">
+                    <label for="idClass" class="block text-sm font-medium text-gray-600">ID Class</label>
+                    <input  type="text" id="idClass" name="idClass" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                </div>
+
+
+                <div class="mb-4">
+                    <label for="industry" class="block text-sm font-medium text-gray-600">Industry</label>
+                    <select class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none" id="industry">
+                        <option value="" selected disabled>Select</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Course Section -->
+        <div class="p-3 rounded-md outline-none bg-white shadow-md my-2 shadow-slate-400">
+            <h3 class="text-xl font-semibold my-2">Course List</h3>
+            <div id="course-list-container">
+                <!-- Đây là phần tử mẫu mà bạn sẽ sao chép khi thêm khóa học mới -->
+                <div class="course-item">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="mb-4">
+                            <label for="idCourse" class="block text-sm font-medium text-gray-600">ID Course</label>
+                            <input type="text" id="idCourse" name="idCourse" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                        </div>
+                        <div class="mb-4">
+                            <label for="title" class="block text-sm font-medium text-gray-600">Title Course</label>
+                            <input type="text" id="title" name="title" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                        </div>
+                        <div class="mb-4">
+                            <label for="credits" class="block text-sm font-medium text-gray-600">Credits</label>
+                            <input type="number" id="credits" name="credits" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                        </div>
+                        <div class="mb-4">
+                            <label for="idTeacher" class="block text-sm font-medium text-gray-600">Id Teacher</label>
+                            <input type="text" id="idTeacher" name="idTeacher" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                        </div>
+                        <div class="mb-4">
+                            <label for="status" class="block text-sm font-medium text-gray-600">Status</label>
+                            <select id="status" name="status" class="mt-1 p-2 w-full border-slate-400 border rounded-md outline-none">
+                                <option value="hoc_lan_dau">Học lần đầu</option>
+                                <option value="hoc_lai">Học lại</option>
+                                <option value="hoc_cai_thien">Học cải thiện</option>
+                                <option value="qua_mon">Hoàn thành</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="bg-red-300 hover:bg-red-700 text-white font-bold py-0.5 px-1 remove-course-item text-red-300 mt-2">Remove</button>
+                </div>
+            </div>
+
+            <button type="button" id="add-course-item" class="mt-4 p-2 bg-blue-500 text-white rounded-md">Add Course</button>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6 gap-2">
+            <button  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
+                     type="submit" onclick="createStudent()" >Add Student</button>
+            <a href="/static/students.html">  <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
+                                                 type="button" onclick="">Dashboard</button></a>
+        </div>
+    </div>
+</div>
+<script src="javaScript/createStudent.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Settings - Admin Dashboard</title>
+
+</head>
+
+<body class="flex h-screen bg-gray-100">
+<!-- Sidebar (Similar to previous implementation) -->
+
+<!-- Sidebar -->
+<div class="bg-gray-800 text-white w-1/5 flex flex-col items-center">
+  <div class="py-4 text-2xl font-bold">Admin Dashboard</div>
+  <nav class="text-sm w-full">
+    <a href="/students.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Students</a>
+    <a href="/industries.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Industries</a>
+    <a href="/faculties.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Faculties</a>
+    <a href="/courses.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Courses</a>
+    <a href="/takes.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Takes</a>
+    <a href="/sections.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Sections</a>
+    <a href="/teachers.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Teachers</a>
+    <a href="/teaches.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Teaches</a>
+    <a href="/times.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Times</a>
+    <a href="/setting.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Settings</a>
+    <a href="/templates/index.html" class="bg-gray-800 hover:bg-gray-500 block py-2 px-4">Logout</a>
+  </nav>
+</div>
+
+<!-- Main Content -->
+<div class="flex-1 p-8">
+  <h2 class="text-2xl font-semibold mb-6">Settings</h2>
+  <!-- Personal Information Section -->
+  <div class="mb-6">
+    <h3 class="text-xl font-semibold mb-2">Personal Information</h3>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="mb-4">
+        <label for="fullName" class="block text-sm font-medium text-gray-600">Full Name</label>
+        <input type="text" id="fullName" name="fullName" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-gray-600">Email</label>
+        <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+    </div>
+  </div>
+
+  <!-- Security Settings Section -->
+  <div class="mb-6">
+    <h3 class="text-xl font-semibold mb-2">Security Settings</h3>
+    <div class="mb-4">
+      <label for="currentPassword" class="block text-sm font-medium text-gray-600">Current Password</label>
+      <input type="password" id="currentPassword" name="currentPassword" class="mt-1 p-2 w-full border rounded-md">
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="mb-4">
+        <label for="newPassword" class="block text-sm font-medium text-gray-600">New Password</label>
+        <input type="password" id="newPassword" name="newPassword" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+      <div class="mb-4">
+        <label for="confirmPassword" class="block text-sm font-medium text-gray-600">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" class="mt-1 p-2 w-full border rounded-md">
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Preferences Section -->
+  <div class="mb-6">
+    <h3 class="text-xl font-semibold mb-2">Notification Preferences</h3>
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-600">Email Notifications</label>
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox">
+        <span class="ml-2">Receive email notifications</span>
+      </label>
+    </div>
+    <div class="mb-4">
+      <label class="block text-sm font-medium text-gray-600">SMS Notifications</label>
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox">
+        <span class="ml-2">Receive SMS notifications</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Save Button -->
+  <div class="gap-3 w-auto">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
+            type="button">Save Changes</button>
+    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline-blue"
+            type="button">Discard</button>
+  </div>
+</div>
+</body>
+
+</html>

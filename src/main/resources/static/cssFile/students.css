@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.admin_login_Error{
+    background-color: rgb(240, 102, 102);
+    color: white;
+    font-size: large;
+    padding: 2px;
+
+}
+.manage_students_filter_dropdownmenu_default{
+    display: none;
+    margin-bottom: 10px;
+
+}
+.manage_students_filter_dropdownmenu_show{
+    display: block;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgb(212, 212, 212) 0px 0px 1px 1px;
+    /* width: 8rem; */
+    margin-bottom: 10px;
+
+}
+.experience_dropdownmenu_show{
+    display: block;
+    z-index: 10;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgb(212, 212, 212) 0px 0px 1px 1px;
+    /* width: rem; */
+    margin-bottom: 10px;
+
+}
+
+#email {
+    padding-right: 40px
+}
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Registration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- Sidebar Navigation -->
+<div class="flex h-screen">
+  <!-- Sidebar -->
+  <div class="w-64 bg-gray-800 text-white flex-shrink-0">
+    <h2 class="text-2xl font-bold p-4 border-b border-gray-700">User Dashboard</h2>
+    <nav class="p-4">
+      <ul>
+        <li class="mb-4">
+          <a href="Users.html" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a>
+        </li>
+        <li class="mb-4">
+          <a href="register.html" class="block px-4 py-2 bg-gray-500 rounded hover:bg-gray-700">Course Registration</a>
+        </li>
+        <li class="mb-4">
+          <a href="grades.html" class="block px-4 py-2 rounded hover:bg-gray-700">Grade Lookup</a>
+        </li>
+        <li class="mt-8">
+          <a href="/templates/index.html" class="block px-4 py-2 bg-red-500 text-center rounded hover:bg-red-600">Logout</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-1 p-6">
+    <!-- Semester and Year Dropdown -->
+    <div class="mb-4 flex items-center space-x-4">
+      <label for="semester" class="text-lg font-semibold">Semester:</label>
+      <select id="semester" class="border rounded px-4 py-2">
+        <option value="" disabled selected>Select Semester</option>
+      </select>
+
+      <label for="year" class="text-lg font-semibold">Year:</label>
+      <select id="year" class="border rounded px-4 py-2">
+        <option value="" disabled selected>Select Year</option>
+      </select>
+    </div>
+
+    <!-- Course Information Section -->
+    <h1 class="text-3xl font-bold mb-4">Available Sections</h1>
+    <div class="overflow-x-auto mb-8">
+      <table class="min-w-full table-auto border-collapse bg-white shadow-md rounded-lg">
+        <thead>
+        <tr class="bg-gray-200 text-gray-700">
+          <th class="px-4 py-2 border-b">Section ID</th>
+          <th class="px-4 py-2 border-b">Course Title</th>
+          <th class="px-4 py-2 border-b">Credits</th>
+          <th class="px-4 py-2 border-b">Teacher Name</th>
+          <th class="px-4 py-2 border-b">Day</th>
+          <th class="px-4 py-2 border-b">Start Time</th>
+          <th class="px-4 py-2 border-b">End Time</th>
+          <th class="px-4 py-2 border-b">Room</th>
+          <th class="px-4 py-2 border-b">Actions</th>
+        </tr>
+        </thead>
+        <tbody id="sectionTableBody">
+        <!-- More sections can be added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Registered Sections -->
+    <h2 class="text-2xl font-bold mb-4">Your Registered Sections</h2>
+    <div class="overflow-x-auto mb-8">
+      <table class="min-w-full table-fixed border-collapse bg-white shadow-md rounded-lg">
+        <thead>
+        <tr class="bg-gray-200 text-gray-700">
+          <th class="px-4 py-2 border-b w-1/8">Section ID</th>
+          <th class="px-4 py-2 border-b w-1/4">Course Title</th>
+          <th class="px-4 py-2 border-b w-1/8">Credits</th>
+          <th class="px-4 py-2 border-b w-1/4">Teacher Name</th>
+          <th class="px-4 py-2 border-b w-1/4">Day</th>
+          <th class="px-4 py-2 border-b w-1/4">Start Time</th>
+          <th class="px-4 py-2 border-b w-1/4">End Time</th>
+          <th class="px-4 py-2 border-b w-1/4">Room</th>
+          <th class="px-4 py-2 border-b w-1/4">Action</th>
+        </tr>
+        </thead>
+        <tbody id="registrationTable">
+        <!-- Registered sections will be added here -->
+        </tbody>
+        <tfoot>
+        <tr class="text-center">
+          <td class="px-4 py-2 border-t font-semibold" colspan="2">Total Credits</td>
+          <td class="px-4 py-2 border-t" id="totalCredits">0</td>
+          <td class="px-4 py-2 border-t" colspan="2">
+            <button id="confirmRegistration" class="bg-green-500 text-white px-4 py-2 rounded">Confirm Registration</button>
+          </td>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script src="javaScript/section_registration.js"></script>
+</body>
+</html>
